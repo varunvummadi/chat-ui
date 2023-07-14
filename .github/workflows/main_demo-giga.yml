@@ -28,7 +28,8 @@ jobs:
           npm install
 
       - name: Archive project directory
-        run: tar -czvf node-app.tar.gz .
+        run: |
+          tar -czvf node-app.tar.gz .
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -50,7 +51,8 @@ jobs:
           name: node-app
 
       - name: Unarchive project directory
-        run: tar -xzvf node-app.tar.gz
+        run: |
+          tar -xzvf node-app.tar.gz
 
       - name: Install dependencies and build the app
         run: |
