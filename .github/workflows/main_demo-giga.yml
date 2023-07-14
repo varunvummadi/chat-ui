@@ -25,6 +25,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          export MONGODB_URL="mongodb+srv://varun:xODRGhw3o762RpUS@cluster0.gzufq7l.mongodb.net/?retryWrites=true&w=majority"
+          export MONGODB_NAME="Cluster0"
           printenv
           npm install
           npm run build --if-present
