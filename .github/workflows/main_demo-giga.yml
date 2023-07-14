@@ -50,7 +50,7 @@ jobs:
           name: node-app
         
       - name: Run the app?
-        run:
+        run: |
           npm run build
 
       - name: 'Deploy to Azure Web App'
